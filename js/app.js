@@ -32,7 +32,5 @@ let Seattle = {
 
 Seattle.getHourlyCustomer();
 Seattle.getAvgCoookiePerCustomer();
-//console.log(randomCoustomer(25,65));
-// console.log(Seattle.hourlyCustomer);
-// console.log(Seattle.randomCoustomer());
+
 
