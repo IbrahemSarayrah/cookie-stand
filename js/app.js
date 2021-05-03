@@ -17,15 +17,13 @@ let Seattle = {
 
   getHourlyCustomer: function () {
     for (let i = 0 ; i < this.workHour.length ; i++) {
-      let random = randomCoustomer(this.minCustomer , this.maxCustomer);
-      this.hourlyCustomer.push(random);
+      this.hourlyCustomer[i] = randomCoustomer(this.minCustomer,this.maxCustomer);
       console.log(this.hourlyCustomer);
     }
   },
   getAvgCoookiePerCustomer: function(){
     for (let i=0; i<this.hourlyCustomer.length; i++){
-      let randomCookie = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
-      this.avgCookiePerCoustomer.push(randomCookie);
+      this.avgCookiePerCoustomer[i] = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
       console.log(this.avgCookiePerCoustomer);
     }
   }
@@ -62,15 +60,13 @@ let Tokyo = {
 
   getHourlyCustomer: function () {
     for (let i = 0 ; i < this.workHour.length ; i++) {
-      let random = randomCoustomer(this.minCustomer , this.maxCustomer);
-      this.hourlyCustomer.push(random);
+      this.hourlyCustomer[i] = randomCoustomer(this.minCustomer,this.maxCustomer);
       console.log(this.hourlyCustomer);
     }
   },
   getAvgCoookiePerCustomer: function(){
     for (let i=0; i<this.hourlyCustomer.length; i++){
-      let randomCookie = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
-      this.avgCookiePerCoustomer.push(randomCookie);
+      this.avgCookiePerCoustomer[i] = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
       console.log(this.avgCookiePerCoustomer);
     }
   }
@@ -106,15 +102,13 @@ let Dubai = {
 
   getHourlyCustomer: function () {
     for (let i = 0 ; i < this.workHour.length ; i++) {
-      let random = randomCoustomer(this.minCustomer , this.maxCustomer);
-      this.hourlyCustomer.push(random);
+      this.hourlyCustomer[i] = randomCoustomer(this.minCustomer,this.maxCustomer);
       console.log(this.hourlyCustomer);
     }
   },
   getAvgCoookiePerCustomer: function(){
     for (let i=0; i<this.hourlyCustomer.length; i++){
-      let randomCookie = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
-      this.avgCookiePerCoustomer.push(randomCookie);
+      this.avgCookiePerCoustomer[i] = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
       console.log(this.avgCookiePerCoustomer);
     }
   }
@@ -150,15 +144,13 @@ let Paris = {
 
   getHourlyCustomer: function () {
     for (let i = 0 ; i < this.workHour.length ; i++) {
-      let random = randomCoustomer(this.minCustomer , this.maxCustomer);
-      this.hourlyCustomer.push(random);
+      this.hourlyCustomer[i] = randomCoustomer(this.minCustomer,this.maxCustomer);
       console.log(this.hourlyCustomer);
     }
   },
   getAvgCoookiePerCustomer: function(){
     for (let i=0; i<this.hourlyCustomer.length; i++){
-      let randomCookie = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
-      this.avgCookiePerCoustomer.push(randomCookie);
+      this.avgCookiePerCoustomer[i] = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
       console.log(this.avgCookiePerCoustomer);
     }
   }
@@ -194,15 +186,13 @@ let Lima = {
 
   getHourlyCustomer: function () {
     for (let i = 0 ; i < this.workHour.length ; i++) {
-      let random = randomCoustomer(this.minCustomer , this.maxCustomer);
-      this.hourlyCustomer.push(random);
+      this.hourlyCustomer[i] = randomCoustomer(this.minCustomer,this.maxCustomer);
       console.log(this.hourlyCustomer);
     }
   },
   getAvgCoookiePerCustomer: function(){
     for (let i=0; i<this.hourlyCustomer.length; i++){
-      let randomCookie = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
-      this.avgCookiePerCoustomer.push(randomCookie);
+      this.avgCookiePerCoustomer[i] = Math.floor(this.hourlyCustomer[i] * this.avgCookieSales);
       console.log(this.avgCookiePerCoustomer);
     }
   }
