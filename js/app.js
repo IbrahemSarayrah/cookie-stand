@@ -4,11 +4,11 @@
 function randomCoustomer(min , max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-let workHour = ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am',];
+
 ///////////////////////////////////////////////////// Seattle
 let Seattle = {
   location : 'Seattle',
-  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am',],
+  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',],
   minCustomer : 23,
   maxCustomer : 65,
   avgCookieSales : 6.3,
@@ -42,10 +42,10 @@ header2.textContent=Seattle.location;
 let unOrdList = document.createElement('ul');
 cookieParent.appendChild(unOrdList);
 
-for (let i=0; i<workHour.length ; i++ ) {
+for (let i=0; i<Seattle.workHour.length ; i++ ) {
   let list =document.createElement('li');
   unOrdList.appendChild(list);
-  list.textContent =workHour[i] + ' ' + Seattle.avgCookiePerCoustomer[i];
+  list.textContent =Seattle.workHour[i] + ' ' + Seattle.avgCookiePerCoustomer[i];
 }
 
 
@@ -53,7 +53,7 @@ for (let i=0; i<workHour.length ; i++ ) {
 
 let Tokyo = {
   location : 'Tokyo',
-  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am',],
+  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',],
   minCustomer : 3,
   maxCustomer : 24,
   avgCookieSales : 1.2,
@@ -87,17 +87,17 @@ header2Tokyo.textContent=Tokyo.location;
 let unOrdList2 = document.createElement('ul');
 cookieParent2.appendChild(unOrdList2);
 
-for (let i=0; i<workHour.length ; i++ ) {
+for (let i=0; i<Tokyo.workHour.length ; i++ ) {
   let list =document.createElement('li');
   unOrdList2.appendChild(list);
-  list.textContent =workHour[i] + ' ' + Tokyo.avgCookiePerCoustomer[i];
+  list.textContent =Tokyo.workHour[i] + ' ' + Tokyo.avgCookiePerCoustomer[i];
 }
 
 
 ////////////////////////////////////////////////////////////////////////////// Dubai
 let Dubai = {
   location : 'Dubai',
-  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am',],
+  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',],
   minCustomer : 11,
   maxCustomer : 38,
   avgCookieSales : 3.7,
@@ -131,17 +131,17 @@ header2Dubai.textContent=Dubai.location;
 let unOrdListDubai = document.createElement('ul');
 cookieParentDubai.appendChild(unOrdListDubai);
 
-for (let i=0; i<workHour.length ; i++ ) {
+for (let i=0; i<Dubai.workHour.length ; i++ ) {
   let list =document.createElement('li');
   unOrdListDubai.appendChild(list);
-  list.textContent =workHour[i] + ' ' + Dubai.avgCookiePerCoustomer[i];
+  list.textContent =Dubai.workHour[i] + ' ' + Dubai.avgCookiePerCoustomer[i];
 }
 
 /////////////////////////////////////////////// Paris
 
 let Paris = {
   location : 'Paris',
-  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am',],
+  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',],
   minCustomer : 20,
   maxCustomer : 38,
   avgCookieSales : 2.3,
@@ -175,17 +175,17 @@ header2Paris.textContent=Paris.location;
 let unOrdListParis = document.createElement('ul');
 cookieParentParis.appendChild(unOrdListParis);
 
-for (let i=0; i<workHour.length ; i++ ) {
+for (let i=0; i<Paris.workHour.length ; i++ ) {
   let list =document.createElement('li');
   unOrdListParis.appendChild(list);
-  list.textContent =workHour[i] + ' ' + Paris.avgCookiePerCoustomer[i];
+  list.textContent =Paris.workHour[i] + ' ' + Paris.avgCookiePerCoustomer[i];
 }
 
 ///////////////////////////////////////////////////////// Lima
 
 let Lima = {
   location : 'Lima',
-  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am',],
+  workHour : ['6am', '7am' ,'8am' ,'9am' ,'10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm',],
   minCustomer : 2,
   maxCustomer : 16,
   avgCookieSales : 4.6,
@@ -219,8 +219,8 @@ header2Lima.textContent=Lima.location;
 let unOrdListLima = document.createElement('ul');
 cookieParentLima.appendChild(unOrdListLima);
 
-for (let i=0; i<workHour.length ; i++ ) {
+for (let i=0; i<Lima.workHour.length ; i++ ) {
   let list =document.createElement('li');
   unOrdListLima.appendChild(list);
-  list.textContent =workHour[i] + ' ' + Lima.avgCookiePerCoustomer[i];
+  list.textContent =Lima.workHour[i] + ' ' + Lima.avgCookiePerCoustomer[i];
 }
