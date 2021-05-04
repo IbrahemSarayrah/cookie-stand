@@ -13,3 +13,27 @@ header nav ul li a {
 font-size: 30px;
 text-decoration: none;
 }
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 60px;
+}
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+img {
+    width: 20%;
+    height: 20%;
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 20px;
+}
