@@ -34,6 +34,7 @@ Store.prototype.getAvgCookiePerCoustomer = function (){
 let cookieParent=document.getElementById('cookie');
 let table =document.createElement('table');
 cookieParent.appendChild(table);
+table.setAttribute('id','theTable');
 // tr 1
 let tr1=document.createElement('tr');
 table.appendChild(tr1);
@@ -105,7 +106,7 @@ function footerRow(){
     let hourlyTotal = 0;
     for (let j = 0 ; j < arrayTotal.length ; j++){
       hourlyTotal += arrayTotal[j].avgCookiePerCoustomer[i];
-   dailyTotal += arrayTotal[j].avgCookiePerCoustomer[i];
+      dailyTotal += arrayTotal[j].avgCookiePerCoustomer[i];
     }
     let th3=document.createElement('th');
     tr2.appendChild(th3);
@@ -118,6 +119,32 @@ function footerRow(){
 }
 footerRow();
 
+
+///////////////////////// form
+
+function deleteRow() {
+  let lastRow = table.rows.length;
+  document.getElementById('theTable').deleteRow(lastRow - 1);
+}
+
+let cookieForm =document.getElementById('form');
+cookieForm.addEventListener('submit',subEvent);
+
+function subEvent(event){
+  event.preventDefault();
+  let locName = event.target.cityName.value;
+  console.log(locName);
+  let minCust =parseInt( event.target.minC.value);
+  console.log(minCust);
+  let maxCust =parseInt( event.target.maxC.value);
+  console.log(maxCust);
+  let avgC= parseInt(event.target.avg.value);
+  console.log(avgC);
+  deleteRow();
+  let addNewlocation = new Store (locName , minCust , maxCust , avgC);
+  addNewlocation.render();
+  footerRow();
+}
 
 
 // ///////////////////////////////////////////////////// Seattle
