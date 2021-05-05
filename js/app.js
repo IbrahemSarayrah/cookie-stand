@@ -6,6 +6,8 @@ function randomCoustomer(min , max){
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+let arrayTotal = [];
+
 function Store (locationName , minCustomer , maxCustomer, avgCookieSales){
   this.locationName =locationName;
   this.minCustomer =minCustomer;
@@ -14,6 +16,7 @@ function Store (locationName , minCustomer , maxCustomer, avgCookieSales){
   this.locationTotal = 0;
   this.hourlyCustomer =[];
   this.avgCookiePerCoustomer =[];
+  arrayTotal.push(this);
 }
 
 Store.prototype.getHourlyCustomer = function () {
@@ -97,6 +100,21 @@ function footerRow(){
   let th2=document.createElement('th');
   tr2.appendChild(th2);
   th2.textContent ='Total';
+  let dailyTotal = 0;
+  for (let i = 0 ; i<workHour.length; i++){
+    let hourlyTotal = 0;
+    for (let j = 0 ; j < arrayTotal.length ; j++){
+      hourlyTotal += arrayTotal[j].avgCookiePerCoustomer[i];
+   dailyTotal += arrayTotal[j].avgCookiePerCoustomer[i];
+    }
+    let th3=document.createElement('th');
+    tr2.appendChild(th3);
+    th3.textContent=hourlyTotal;
+
+  }
+  let th3=document.createElement('th');
+  tr2.appendChild(th3);
+  th3.textContent =dailyTotal;
 }
 footerRow();
 
